@@ -1,32 +1,985 @@
-<!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sabionet Anim</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Banco de imagens e animações · Sabionet</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Poppins,system-ui,sans-serif;background:#f6f5fa;color:#1d1b26}
-body.dk{background:#0f0e14;color:#f0eef6}
-header{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:16px;padding:14px 32px;background:rgba(246,245,250,.9);backdrop-filter:blur(10px);border-bottom:1px solid #e7e4ef}
-body.dk header{background:rgba(15,14,20,.9);border-color:#27252f}
-header b{font-size:17px}header span{font-size:12.5px;color:#686577}
-.seg{margin-left:auto;display:flex;background:#fff;border:1px solid #e7e4ef;border-radius:100px;padding:3px}
-body.dk .seg{background:#17161f;border-color:#27252f}
-.seg button{font:500 12.5px Poppins,sans-serif;border:0;background:transparent;border-radius:100px;padding:6px 14px;cursor:pointer;color:inherit}
-.seg button.on{background:#1d1b26;color:#fff}body.dk .seg button.on{background:#fff;color:#1d1b26}
-main{max-width:1240px;margin:0 auto;padding:10px 32px 60px}
-h2{font-size:20px;margin:40px 0 16px}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-figure{margin:0}figure.m{grid-column:span 2}figure.l{grid-column:1/-1}
-sbn-anim{border-radius:18px;overflow:hidden;border:1px solid #e7e4ef}body.dk sbn-anim{border-color:#27252f}
-figcaption{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:13px;margin-top:10px;color:#686577}
-figcaption b{color:inherit;font-weight:700}body:not(.dk) figcaption b{color:#1d1b26}
-figcaption code{margin-left:auto;font:500 11px ui-monospace,Menlo,monospace;background:#ece9f5;color:#6d28d9;border-radius:6px;padding:3px 7px}
-body.dk figcaption code{background:#221f33;color:#c4a5ff}
-@media (max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}figure.m{grid-column:1/-1}}
-@media (max-width:600px){.grid{grid-template-columns:1fr}main,header{padding-left:16px;padding-right:16px}}
-</style></head>
-<body><header><b>Sabionet Anim</b><span>Página de teste da biblioteca · v1.0.1</span>
-<div class="seg"><button class="on" data-t="light">Claro</button><button data-t="dark">Escuro</button></div></header>
-<main><section><h2>Criação de curso</h2><div class="grid"><figure class="s"><sbn-anim piece="CUR-01" theme="light" lang="pt"></sbn-anim><figcaption><b>CUR-01</b>Curso gerado com IA<code>&lt;sbn-anim piece="CUR-01"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="CUR-03" theme="light" lang="pt"></sbn-anim><figcaption><b>CUR-03</b>Da ideia ao curso<code>&lt;sbn-anim piece="CUR-03"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="CUR-02" theme="light" lang="pt"></sbn-anim><figcaption><b>CUR-02</b>Tipos de aula<code>&lt;sbn-anim piece="CUR-02"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="CUR-04" theme="light" lang="pt"></sbn-anim><figcaption><b>CUR-04</b>Editor de curso com IA<code>&lt;sbn-anim piece="CUR-04"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="CUR-05" theme="light" lang="pt"></sbn-anim><figcaption><b>CUR-05</b>Exames com 8 tipos de pergunta<code>&lt;sbn-anim piece="CUR-05"&gt;</code></figcaption></figure></div></section><section><h2>Landing page builder</h2><div class="grid"><figure class="s"><sbn-anim piece="LP-01" theme="light" lang="pt"></sbn-anim><figcaption><b>LP-01</b>Adicionar seção<code>&lt;sbn-anim piece="LP-01"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="LP-02" theme="light" lang="pt"></sbn-anim><figcaption><b>LP-02</b>Publicar a página<code>&lt;sbn-anim piece="LP-02"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="LP-03" theme="light" lang="pt"></sbn-anim><figcaption><b>LP-03</b>Reescrever com IA<code>&lt;sbn-anim piece="LP-03"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="LP-04" theme="light" lang="pt"></sbn-anim><figcaption><b>LP-04</b>Página de vendas montada no builder<code>&lt;sbn-anim piece="LP-04"&gt;</code></figcaption></figure></div></section><section><h2>Checkout</h2><div class="grid"><figure class="s"><sbn-anim piece="CHK-01" theme="light" lang="pt"></sbn-anim><figcaption><b>CHK-01</b>Pagamento local em cada país<code>&lt;sbn-anim piece="CHK-01"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="CHK-02" theme="light" lang="pt"></sbn-anim><figcaption><b>CHK-02</b>Checkout expresso<code>&lt;sbn-anim piece="CHK-02"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="CHK-03" theme="light" lang="pt"></sbn-anim><figcaption><b>CHK-03</b>Da compra ao acesso<code>&lt;sbn-anim piece="CHK-03"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="CHK-04" theme="light" lang="pt"></sbn-anim><figcaption><b>CHK-04</b>Da página do curso ao pagamento aprovado<code>&lt;sbn-anim piece="CHK-04"&gt;</code></figcaption></figure></div></section><section><h2>Gamificação</h2><div class="grid"><figure class="s"><sbn-anim piece="GAM-01" theme="light" lang="pt"></sbn-anim><figcaption><b>GAM-01</b>Subindo de nível<code>&lt;sbn-anim piece="GAM-01"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="GAM-02" theme="light" lang="pt"></sbn-anim><figcaption><b>GAM-02</b>Insígnia desbloqueada<code>&lt;sbn-anim piece="GAM-02"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="GAM-03" theme="light" lang="pt"></sbn-anim><figcaption><b>GAM-03</b>Configurar a gamificação<code>&lt;sbn-anim piece="GAM-03"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="GAM-04" theme="light" lang="pt"></sbn-anim><figcaption><b>GAM-04</b>Ranking ao vivo<code>&lt;sbn-anim piece="GAM-04"&gt;</code></figcaption></figure></div></section><section><h2>Área do aluno</h2><div class="grid"><figure class="s"><sbn-anim piece="ALU-04" theme="light" lang="pt"></sbn-anim><figcaption><b>ALU-04</b>Certificado emitido<code>&lt;sbn-anim piece="ALU-04"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="ALU-05" theme="light" lang="pt"></sbn-anim><figcaption><b>ALU-05</b>Aula no celular<code>&lt;sbn-anim piece="ALU-05"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="ALU-06" theme="light" lang="pt"></sbn-anim><figcaption><b>ALU-06</b>Minhas notas<code>&lt;sbn-anim piece="ALU-06"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="ALU-01" theme="light" lang="pt"></sbn-anim><figcaption><b>ALU-01</b>Aula em vídeo no player<code>&lt;sbn-anim piece="ALU-01"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="ALU-02" theme="light" lang="pt"></sbn-anim><figcaption><b>ALU-02</b>Painel do aluno em claro e escuro<code>&lt;sbn-anim piece="ALU-02"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="ALU-03" theme="light" lang="pt"></sbn-anim><figcaption><b>ALU-03</b>Do desktop ao celular<code>&lt;sbn-anim piece="ALU-03"&gt;</code></figcaption></figure></div></section><section><h2>Comunidades</h2><div class="grid"><figure class="s"><sbn-anim piece="COM-01" theme="light" lang="pt"></sbn-anim><figcaption><b>COM-01</b>Convidar membros<code>&lt;sbn-anim piece="COM-01"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="COM-02" theme="light" lang="pt"></sbn-anim><figcaption><b>COM-02</b>Pesquisa na comunidade<code>&lt;sbn-anim piece="COM-02"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="COM-03" theme="light" lang="pt"></sbn-anim><figcaption><b>COM-03</b>Comunidade no celular<code>&lt;sbn-anim piece="COM-03"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="COM-04" theme="light" lang="pt"></sbn-anim><figcaption><b>COM-04</b>Postando na comunidade<code>&lt;sbn-anim piece="COM-04"&gt;</code></figcaption></figure></div></section><section><h2>Certificados</h2><div class="grid"><figure class="s"><sbn-anim piece="CERT-01" theme="light" lang="pt"></sbn-anim><figcaption><b>CERT-01</b>Modelos de certificado<code>&lt;sbn-anim piece="CERT-01"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="CERT-02" theme="light" lang="pt"></sbn-anim><figcaption><b>CERT-02</b>Validação por QR Code<code>&lt;sbn-anim piece="CERT-02"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="CERT-03" theme="light" lang="pt"></sbn-anim><figcaption><b>CERT-03</b>Emissão automática<code>&lt;sbn-anim piece="CERT-03"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="CERT-04" theme="light" lang="pt"></sbn-anim><figcaption><b>CERT-04</b>Configurando o certificado do curso<code>&lt;sbn-anim piece="CERT-04"&gt;</code></figcaption></figure></div></section><section><h2>Gestão de usuários</h2><div class="grid"><figure class="s"><sbn-anim piece="USR-01" theme="light" lang="pt"></sbn-anim><figcaption><b>USR-01</b>Filtros avançados<code>&lt;sbn-anim piece="USR-01"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="USR-02" theme="light" lang="pt"></sbn-anim><figcaption><b>USR-02</b>Perfil do usuário<code>&lt;sbn-anim piece="USR-02"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="USR-03" theme="light" lang="pt"></sbn-anim><figcaption><b>USR-03</b>Importar usuários<code>&lt;sbn-anim piece="USR-03"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="USR-04" theme="light" lang="pt"></sbn-anim><figcaption><b>USR-04</b>Lista de usuários com filtros<code>&lt;sbn-anim piece="USR-04"&gt;</code></figcaption></figure></div></section><section><h2>Automações</h2><div class="grid"><figure class="s"><sbn-anim piece="AUT-01" theme="light" lang="pt"></sbn-anim><figcaption><b>AUT-01</b>Crie uma regra em segundos<code>&lt;sbn-anim piece="AUT-01"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="AUT-02" theme="light" lang="pt"></sbn-anim><figcaption><b>AUT-02</b>Trabalhando enquanto você dorme<code>&lt;sbn-anim piece="AUT-02"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="AUT-03" theme="light" lang="pt"></sbn-anim><figcaption><b>AUT-03</b>Uma inscrição, quatro tarefas<code>&lt;sbn-anim piece="AUT-03"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="AUT-04" theme="light" lang="pt"></sbn-anim><figcaption><b>AUT-04</b>Criando uma automação de operação<code>&lt;sbn-anim piece="AUT-04"&gt;</code></figcaption></figure></div></section><section><h2>Relatórios</h2><div class="grid"><figure class="s"><sbn-anim piece="REL-01" theme="light" lang="pt"></sbn-anim><figcaption><b>REL-01</b>Pergunte à IA<code>&lt;sbn-anim piece="REL-01"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="REL-02" theme="light" lang="pt"></sbn-anim><figcaption><b>REL-02</b>Um clique, outro gráfico<code>&lt;sbn-anim piece="REL-02"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="REL-03" theme="light" lang="pt"></sbn-anim><figcaption><b>REL-03</b>Relatórios recomendados<code>&lt;sbn-anim piece="REL-03"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="REL-04" theme="light" lang="pt"></sbn-anim><figcaption><b>REL-04</b>Audit trail: quem mudou o quê<code>&lt;sbn-anim piece="REL-04"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="REL-05" theme="light" lang="pt"></sbn-anim><figcaption><b>REL-05</b>Filtros e cores<code>&lt;sbn-anim piece="REL-05"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="REL-06" theme="light" lang="pt"></sbn-anim><figcaption><b>REL-06</b>Análises com IA, na tela completa<code>&lt;sbn-anim piece="REL-06"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="REL-07" theme="light" lang="pt"></sbn-anim><figcaption><b>REL-07</b>Seus dados, em um só lugar<code>&lt;sbn-anim piece="REL-07"&gt;</code></figcaption></figure></div></section><section><h2>Marketplace</h2><div class="grid"><figure class="s"><sbn-anim piece="MKT-02" theme="light" lang="pt"></sbn-anim><figcaption><b>MKT-02</b>O marketplace em uma imagem<code>&lt;sbn-anim piece="MKT-02"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="MKT-04" theme="light" lang="pt"></sbn-anim><figcaption><b>MKT-04</b>Publicar no marketplace<code>&lt;sbn-anim piece="MKT-04"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="MKT-05" theme="light" lang="pt"></sbn-anim><figcaption><b>MKT-05</b>Encontre o curso certo<code>&lt;sbn-anim piece="MKT-05"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="MKT-06" theme="light" lang="pt"></sbn-anim><figcaption><b>MKT-06</b>Comprar pelo celular<code>&lt;sbn-anim piece="MKT-06"&gt;</code></figcaption></figure><figure class="m"><sbn-anim piece="MKT-03" theme="light" lang="pt"></sbn-anim><figcaption><b>MKT-03</b>O marketplace montado em equipe<code>&lt;sbn-anim piece="MKT-03"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="MKT-01" theme="light" lang="pt"></sbn-anim><figcaption><b>MKT-01</b>Como o marketplace conecta todo mundo<code>&lt;sbn-anim piece="MKT-01"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="MKT-07" theme="light" lang="pt"></sbn-anim><figcaption><b>MKT-07</b>A vitrine do marketplace<code>&lt;sbn-anim piece="MKT-07"&gt;</code></figcaption></figure></div></section><section><h2>Afiliados</h2><div class="grid"><figure class="s"><sbn-anim piece="AFI-01" theme="light" lang="pt"></sbn-anim><figcaption><b>AFI-01</b>Afilie-se e pegue seu link<code>&lt;sbn-anim piece="AFI-01"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="AFI-02" theme="light" lang="pt"></sbn-anim><figcaption><b>AFI-02</b>Comissão a cada venda<code>&lt;sbn-anim piece="AFI-02"&gt;</code></figcaption></figure><figure class="s"><sbn-anim piece="AFI-03" theme="light" lang="pt"></sbn-anim><figcaption><b>AFI-03</b>Divulgue de qualquer lugar<code>&lt;sbn-anim piece="AFI-03"&gt;</code></figcaption></figure><figure class="l"><sbn-anim piece="AFI-04" theme="light" lang="pt"></sbn-anim><figcaption><b>AFI-04</b>O painel do afiliado<code>&lt;sbn-anim piece="AFI-04"&gt;</code></figcaption></figure></div></section><section><h2>Integrações</h2><div class="grid"><figure class="s"><sbn-anim piece="INT-02" theme="light" lang="pt"></sbn-anim><figcaption><b>INT-02</b>Integração em um minuto<code>&lt;sbn-anim piece="INT-02"&gt;</code></figcaption></figure><figure class="m"><sbn-anim piece="INT-01" theme="light" lang="pt"></sbn-anim><figcaption><b>INT-01</b>Tudo conectado à sua escola<code>&lt;sbn-anim piece="INT-01"&gt;</code></figcaption></figure></div></section><section><h2>Pagamentos</h2><div class="grid"><figure class="s"><sbn-anim piece="PAY-01" theme="light" lang="pt"></sbn-anim><figcaption><b>PAY-01</b>Receba do mundo todo<code>&lt;sbn-anim piece="PAY-01"&gt;</code></figcaption></figure><figure class="m"><sbn-anim piece="PAY-02" theme="light" lang="pt"></sbn-anim><figcaption><b>PAY-02</b>Todos os meios de pagamento em um lugar<code>&lt;sbn-anim piece="PAY-02"&gt;</code></figcaption></figure></div></section></main>
-<script>document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.seg button').forEach(x=>x.classList.toggle('on',x===b));document.body.classList.toggle('dk',b.dataset.t==='dark');document.querySelectorAll('sbn-anim').forEach(e=>e.setAttribute('theme',b.dataset.t))});</script>
-<script src="/v/1.0.1/sabionet-anim.js" defer></script></body></html>
+/* ---------- Page chrome ---------- */
+:root{
+  --bg:#f6f5fa; --panel:#ffffff; --ink:#1d1b26; --muted:#686577; --line:#e7e4ef; --accent:#6d28d9;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f0e14; --panel:#17161f; --ink:#f0eef6; --muted:#9a97a8; --line:#27252f; --accent:#b794ff; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f0e14; --panel:#17161f; --ink:#f0eef6; --muted:#9a97a8; --line:#27252f; --accent:#b794ff; color-scheme:dark;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:8px}
+
+.intro{padding:56px 0 32px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+.intro h1{font-weight:600;font-size:clamp(28px,4vw,42px);line-height:1.12;letter-spacing:-.02em;margin:0 0 14px;max-width:16ch}
+.intro p{color:var(--muted);font-size:15px;line-height:1.65;margin:0;max-width:56ch}
+.key{display:grid;gap:10px}
+.key div{display:grid;grid-template-columns:92px 1fr;gap:12px;font-size:13px;line-height:1.5;padding:10px 0;border-top:1px solid var(--line)}
+.key b{font-weight:600}
+.key span{color:var(--muted)}
+
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.nav{display:flex;gap:2px;white-space:nowrap;overflow-x:auto;min-width:0;flex:1;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{text-decoration:none;font-size:13px;font-weight:500;padding:8px 10px;border-radius:100px;color:var(--muted)}
+.nav a:hover{color:var(--ink);background:var(--panel)}
+.seg{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);white-space:nowrap;flex:none}
+.seg-btns{display:flex;background:var(--panel);border:1px solid var(--line);border-radius:100px;padding:3px}
+.seg-btns button{border:0;background:transparent;font-size:12.5px;font-weight:500;padding:6px 14px;border-radius:100px;cursor:pointer;color:var(--muted)}
+.seg-btns button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+
+.feature{padding:56px 0 8px}
+.fhead{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:22px;flex-wrap:wrap}
+.fhead h2{font-weight:600;font-size:24px;letter-spacing:-.01em;margin:0 0 6px}
+.fhead p{margin:0;color:var(--muted);font-size:14px;line-height:1.6;max-width:62ch}
+.fhead .count{font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tile.wide{grid-column:1/-1}
+.stage{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+.tile.wide .stage{aspect-ratio:1100/520}
+.cap{padding:14px 2px 0}
+.cap-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.code{font-size:12px;font-weight:600;color:var(--muted)}
+.kind{font-size:11.5px;font-weight:500;color:var(--muted);border:1px solid var(--line);border-radius:100px;padding:2px 10px}
+.cap h3{font-weight:600;font-size:15.5px;margin:6px 0 6px}
+.cap p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+.cap .src{margin-top:6px;font-size:12px}
+.cap .src code{font-family:inherit;font-weight:500;color:var(--ink)}
+
+@media (max-width:980px){.grid{grid-template-columns:1fr 1fr}.intro{grid-template-columns:1fr}}
+@media (max-width:620px){.grid{grid-template-columns:1fr}.tile.wide .stage{aspect-ratio:4/3}.bar .seg>span{display:none}}
+
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:13.5px}
+th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.5}
+th{font-weight:600;font-size:12.5px;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600;white-space:nowrap}
+td .st{display:inline-block;font-size:12px;font-weight:500;border-radius:100px;padding:2px 10px;background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent);white-space:nowrap}
+td .mut{color:var(--muted)}
+
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rule{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}
+.rule h3{font-size:15px;font-weight:600;margin:0 0 12px}
+.rule p,.rule li{font-size:13px;color:var(--muted);line-height:1.6}
+.rule ul{margin:0;padding-left:18px}
+.sw{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.sw div{display:flex;gap:10px;align-items:center;font-size:12.5px}
+.sw i{width:28px;height:28px;border-radius:8px;border:1px solid var(--line);flex:none}
+.sw small{display:block;color:var(--muted);font-size:11.5px}
+@media (max-width:980px){.rules{grid-template-columns:1fr}}
+footer{padding:48px 0 64px;color:var(--muted);font-size:12.5px}
+
+.grid.g6{grid-template-columns:repeat(6,1fr)}
+.g6>.tile{grid-column:span 2}
+.g6>.tile.half{grid-column:span 3}
+.g6>.tile.two{grid-column:span 4}
+.g6>.tile.wide{grid-column:1/-1}
+@media (max-width:980px){.g6>.tile,.g6>.tile.half{grid-column:span 3}.g6>.tile.two{grid-column:1/-1}}
+@media (max-width:620px){.g6>.tile,.g6>.tile.half{grid-column:1/-1}}
+sbn-anim{display:block;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+main[data-assets="dark"] sbn-anim{border-color:#23222d}
+.cap-top{gap:8px}
+.cap-top .kind{margin-left:auto}
+.cp{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:100px;padding:3px 10px 3px 8px;font:600 11.5px 'Poppins',sans-serif;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.cp svg{width:13px;height:13px}
+.cp:hover{border-color:var(--accent);color:var(--accent)}
+.cp.ok{background:#10b981;border-color:#10b981;color:#fff}
+.cap .use{margin-top:4px;font-size:12px;color:var(--muted)}
+.lang-btns button[disabled]{opacity:.45;cursor:not-allowed}
+.inst{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+.inst .step{min-width:0}
+.inst .step{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}
+.inst .step h3{margin:0 0 6px;font-size:15px;font-weight:600;display:flex;align-items:center;gap:10px}
+.inst .step h3 i{font-style:normal;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:12px}
+.inst .step p,.inst .step li{font-size:13px;color:var(--muted);line-height:1.6}
+.inst .step ul{margin:6px 0 0;padding-left:18px}
+.code{font-size:12px;font-weight:600;color:var(--muted)}
+.codeblk{position:relative;margin-top:10px;background:#16151d;color:#e9e7f5;border-radius:12px;padding:14px 16px;font:500 12px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto;white-space:pre}
+.codeblk{display:flex;align-items:center;gap:12px;white-space:normal}
+.codeblk>span{flex:1;min-width:0;overflow-x:auto;white-space:pre}
+.codeblk .cp{position:static;order:2;flex:none;background:#26242f;border-color:#3a3845;color:#e9e7f5}
+.opts{width:100%;border-collapse:collapse;margin-top:10px;font-size:12.5px;min-width:0}
+.opts td,.opts th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+.opts th{font-size:11.5px;color:var(--muted);font-weight:600}
+.opts code{font:600 12px ui-monospace,Menlo,Consolas,monospace;color:var(--accent)}
+.inst .full{grid-column:1/-1}
+@media (max-width:980px){.inst{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="wrap intro">
+<div>
+<h1>Banco de imagens e animações da Sabionet</h1>
+<p>Peças para o site e as landing pages, construídas em código a partir dos componentes do Figma. Todas funcionam em claro e escuro e o texto pode ser traduzido direto no Webflow, sem refazer a arte.</p>
+</div>
+<div aria-label="Tipos de peça" class="key">
+<div><b>Micro-card</b><span>Uma única ação da feature em loop. Vai ao lado de um bloco de texto curto.</span></div>
+<div><b>Fluxo</b><span>Uma sequência de etapas que conta o antes e depois da feature.</span></div>
+<div><b>Cena</b><span>Composição em camadas com profundidade para heros e topos de seção.</span></div>
+</div>
+</header>
+<div class="bar">
+<div class="wrap">
+<nav aria-label="Seções" class="nav">
+<a href="#instalar">Como usar</a>
+      <a href="#curso">Criação de curso</a>
+<a href="#lp">Landing page builder</a>
+<a href="#checkout">Checkout</a>
+<a href="#gamificacao">Gamificação</a>
+<a href="#aluno">Área do aluno</a>
+<a href="#comunidades">Comunidades</a>
+<a href="#certificados">Certificados</a>
+<a href="#usuarios">Usuários</a>
+<a href="#automacoes">Automações</a>
+<a href="#relatorios">Relatórios</a>
+<a href="#marketplace">Marketplace</a>
+<a href="#afiliados">Afiliados</a>
+<a href="#integracoes">Integrações</a>
+<a href="#proximas">Próximas features</a>
+<a href="#regras">Regras visuais</a>
+</nav>
+<div class="seg"><span>Tema</span>
+      <div class="seg-btns theme-btns" role="group" aria-label="Tema das peças">
+        <button type="button" data-mode="light" aria-pressed="true">Claro</button>
+        <button type="button" data-mode="dark" aria-pressed="false">Escuro</button>
+        <button type="button" data-mode="auto" aria-pressed="false">Auto</button>
+      </div>
+      <div class="seg-btns lang-btns" role="group" aria-label="Idioma">
+        <button type="button" data-lang="pt" aria-pressed="true">PT</button>
+        <button type="button" data-lang="es" aria-pressed="false" disabled title="Em breve">ES</button>
+      </div>
+    </div>
+</div>
+</div>
+<main data-assets="light">
+<section class="wrap feature" id="instalar">
+  <div class="fhead"><div><h2>Como usar no site</h2><p>Todas as peças vêm de uma biblioteca só. Ela é instalada uma vez no site, e cada peça entra com uma linha de código, no tema e na proporção que você escolher.</p></div></div>
+  <div class="inst">
+    <div class="step"><h3><i>1</i>Instale a biblioteca uma vez</h3>
+      <p>No Webflow, em <b>Configurações do site › Código personalizado › Footer code</b>, cole a linha abaixo e publique.</p>
+      <div class="codeblk"><button type="button" class="cp" data-copy-el="c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg><span>Copiar</span></button><span id="c1">&lt;script src="https://sabionet-anim.vercel.app/v/1.0.2/sabionet-anim.js" defer&gt;&lt;/script&gt;</span></div></div>
+    <div class="step"><h3><i>2</i>Cole a peça onde quiser</h3>
+      <p>Adicione um elemento <b>Embed</b> na página e cole o código da peça. Cada card deste catálogo tem o botão <b>Copiar código</b>, que já copia com o tema e o idioma selecionados no topo.</p>
+      <div class="codeblk"><span>&lt;sbn-anim piece="CUR-01" theme="light" lang="pt"&gt;&lt;/sbn-anim&gt;</span></div></div>
+    <div class="step full"><h3><i>3</i>Opções de cada peça</h3>
+      <div style="overflow-x:auto"><table class="opts"><thead><tr><th>Atributo</th><th>Valores</th><th>O que faz</th></tr></thead><tbody>
+        <tr><td><code>piece</code></td><td>código da peça, ex.: <code>CUR-01</code></td><td>Escolhe a ilustração.</td></tr>
+        <tr><td><code>theme</code></td><td><code>light</code> · <code>dark</code> · <code>auto</code></td><td>Tema claro, escuro ou automático (segue o tema do sistema do visitante). Pode ser trocado a qualquer momento só editando a palavra.</td></tr>
+        <tr><td><code>lang</code></td><td><code>pt</code> · <code>es</code> (em breve)</td><td>Idioma dos textos da peça.</td></tr>
+        <tr><td><code>ratio</code></td><td>ex.: <code>4/5</code>, <code>6/5</code></td><td>Opcional. Muda a proporção do quadro; a ilustração se centraliza dentro dele.</td></tr>
+        <tr><td><code>background</code></td><td><code>none</code></td><td>Opcional. Remove o fundo degradê para a peça ficar sobre a cor da seção.</td></tr>
+        <tr><td><code>style="--sbn-radius:0"</code></td><td>qualquer medida</td><td>Opcional. Arredondamento dos cantos do quadro (padrão: 20px).</td></tr>
+      </tbody></table></div>
+      <ul><li><b>Peças pequenas</b> (4:5) funcionam no desktop e no celular. <b>Médias</b> (5:3) ficam melhores a partir do tablet. <b>Grandes</b> (≈16:9) são para desktop; no celular, esconda a grande e mostre uma pequena equivalente.</li>
+      <li>As peças se ajustam à largura do espaço, animam só quando aparecem na tela e respeitam quem pede menos movimento no sistema.</li>
+      <li>Os estilos ficam isolados dentro de cada peça, então nada do site interfere nelas e elas não mexem no visual do site.</li></ul></div>
+  </div>
+</section>
+<!-- ================= CRIAÇÃO DE CURSO ================= -->
+<section class="wrap feature" id="curso">
+<div class="fhead">
+<div>
+<h2>Criação de curso</h2>
+<p>Mostra que dá para sair de uma ideia e chegar a um curso estruturado em minutos, com a IA montando módulos e aulas.</p>
+</div>
+<span class="count">5 peças</span>
+</div>
+<div class="grid g6">
+<article class="tile half">
+<sbn-anim lang="pt" piece="CUR-01" ratio="6/5" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">CUR-01</span><span class="kind">Micro-card</span><button class="cp" data-piece="CUR-01" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Curso gerado com IA</h3>
+<p>A barra avança, os módulos e aulas vão sendo contados e o selo muda para “Curso pronto”.</p>
+<p class="src">Base no Figma: <code>ai-course-card-system</code></p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile half">
+<sbn-anim lang="pt" piece="CUR-03" ratio="6/5" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">CUR-03</span><span class="kind">Fluxo</span><button class="cp" data-piece="CUR-03" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Da ideia ao curso</h3>
+<p>A descrição é digitada, o botão “Criar com IA” é acionado e os módulos entram um por um.</p>
+<p class="src">Base no Figma: editor de curso e <code>ai-course-card-system</code></p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="CUR-02" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">CUR-02</span><span class="kind">Micro-card</span><button class="cp" data-piece="CUR-02" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Tipos de aula</h3>
+<p>O modal “Criar aula” com os 15 tipos da plataforma e os três novos (HTML5, LTI e Tarefa) em destaque. Os tipos entram em sequência, o cursor passa por alguns, escolhe “Tarefa” e liga o modo com IA.</p>
+<p class="src">Base: modal “Crear lección” da plataforma e <code>lesson-type-icons-system</code></p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção 1100×520</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="CUR-04" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">CUR-04</span><span class="kind">Cena</span><button class="cp" data-piece="CUR-04" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Editor de curso com IA</h3>
+<p>O editor fica ao fundo e os cards flutuam em planos diferentes, reagindo ao movimento do mouse. Pensada para o hero da página de criação de cursos.</p>
+<p class="src">Base no Figma: composição “Criação com IA” (seção Cursos)</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção 1100×520</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="CUR-05" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">CUR-05</span><span class="kind">Fluxo</span><button class="cp" data-piece="CUR-05" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Exames com 8 tipos de pergunta</h3>
+<p>À esquerda, o professor troca o tipo de pergunta no editor do exame; à direita, o aluno responde aquele tipo e recebe a correção na hora. Passa por respostas múltiplas, resposta única, relacionar colunas, ordenar, verdadeiro/falso, completar espaços, seleção em lista e pergunta livre.</p>
+<p class="src">Base: telas “Crear examen” e “Editar examen” da plataforma</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção 1100×520</p></div>
+</article>
+</div>
+</section>
+<!-- ================= LANDING PAGE BUILDER ================= -->
+<section class="wrap feature" id="lp">
+<div class="fhead">
+<div>
+<h2>Landing page builder</h2>
+<p>Mostra que qualquer pessoa monta e publica uma página de vendas sozinha: adiciona seções, edita textos com IA e publica em um clique.</p>
+</div>
+<span class="count">4 peças</span>
+</div>
+<div class="grid">
+<article class="tile">
+<sbn-anim lang="pt" piece="LP-01" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">LP-01</span><span class="kind">Micro-card</span><button class="cp" data-piece="LP-01" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Adicionar seção</h3>
+<p>O cursor abre “Adicionar seção”, escolhe “Prova social” e a nova seção entra na estrutura da página.</p>
+<p class="src">Base no Figma: <code>editor-toolbar-structure-system</code></p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="LP-02" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">LP-02</span><span class="kind">Micro-card</span><button class="cp" data-piece="LP-02" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Publicar a página</h3>
+<p>Um clique em “Publicar”, o status passa de “Rascunho” para “Publicada” e aparece a confirmação.</p>
+<p class="src">Base no Figma: <code>editor-toolbar-structure-system</code></p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="LP-03" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">LP-03</span><span class="kind">Fluxo</span><button class="cp" data-piece="LP-03" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Reescrever com IA</h3>
+<p>O título é selecionado, “Criar com IA” é acionado e o texto é reescrito na hora, junto com o subtítulo.</p>
+<p class="src">Base no Figma: <code>landing-hero-navbar-system</code></p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="LP-04" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">LP-04</span><span class="kind">Cena</span><button class="cp" data-piece="LP-04" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Página de vendas montada no builder</h3>
+<p>A página no centro, a estrutura ao fundo, a barra de edição por cima e o card de preço em primeiro plano. Pensada para o hero da página do builder.</p>
+<p class="src">Base no Figma: <code>landing-hero-navbar-system</code>, página de vendas e checkout</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção 1100×520</p></div>
+</article>
+</div>
+</section>
+<!-- ================= CHECKOUT ================= -->
+<section class="wrap feature" id="checkout">
+<div class="fhead">
+<div>
+<h2>Checkout e pagamentos</h2>
+<p>Mostra que o aluno paga do jeito que já está acostumado no país dele e recebe o acesso na hora, sem a escola precisar configurar nada.</p>
+</div>
+<span class="count">4 peças</span>
+</div>
+<div class="grid">
+<article class="tile">
+<sbn-anim lang="pt" piece="CHK-01" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">CHK-01</span><span class="kind">Micro-card</span><button class="cp" data-piece="CHK-01" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Pagamento local em cada país</h3>
+<p>O país troca e os logos dos métodos de pagamento se atualizam, com os locais contornados em violeta. Google Pay e Apple Pay aparecem em todos os países.</p>
+<p class="src">Base no Figma: métodos por país (Argentina a Uruguai) e <code>pricing-checkout-system</code></p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="CHK-02" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">CHK-02</span><span class="kind">Micro-card</span><button class="cp" data-piece="CHK-02" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Checkout expresso</h3>
+<p>O e-mail é digitado, “Comprar agora” é clicado e o card confirma o pagamento aprovado com o acesso liberado.</p>
+<p class="src">Base no Figma: <code>pricing-checkout-system</code></p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="CHK-03" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">CHK-03</span><span class="kind">Fluxo</span><button class="cp" data-piece="CHK-03" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Da compra ao acesso</h3>
+<p>O QR do Pix é lido, o pagamento é aprovado, o e-mail sai e o curso aparece liberado para o aluno. Para LATAM, dá para trocar o Pix por OXXO, Yape ou PSE.</p>
+<p class="src">Base no Figma: <code>pricing-checkout-system</code> e automações</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="CHK-04" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">CHK-04</span><span class="kind">Fluxo</span><button class="cp" data-piece="CHK-04" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Da página do curso ao pagamento aprovado</h3>
+<p>A página do curso completa, com capa, apresentação, módulos e o card de preço. O aluno digita o e-mail no checkout expresso e clica em “Comprar agora”; a aba lateral de pagamento abre, passa por Pix e boleto, volta para cartão, é preenchida e o pagamento é aprovado.</p>
+<p class="src">Base: página de curso, card de preço e aba “Pago express” da plataforma</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção ≈16:9</p></div>
+</article>
+</div>
+</section>
+<!-- ================= GAMIFICAÇÃO ================= -->
+<section class="wrap feature" id="gamificacao">
+<div class="fhead">
+<div>
+<h2>Gamificação</h2>
+<p>Mostra os dois lados: o admin liga o sistema e define quanto vale cada atividade, e o aluno ganha pontos, sobe de nível, desbloqueia insígnias e sobe no ranking.</p>
+</div>
+<span class="count">4 peças</span>
+</div>
+<div class="grid">
+<article class="tile">
+<sbn-anim lang="pt" piece="GAM-01" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">GAM-01</span><span class="kind">Micro-card · aluno</span><button class="cp" data-piece="GAM-01" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Subindo de nível</h3>
+<p>Cada atividade entra no feed e soma pontos na barra. Ao passar de 50 pontos, a gema troca, o título muda e o aluno sobe de nível com confete.</p>
+<p class="src">Base: níveis, pontos e perfil do aluno na plataforma</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="GAM-02" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">GAM-02</span><span class="kind">Micro-card · aluno</span><button class="cp" data-piece="GAM-02" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Insígnia desbloqueada</h3>
+<p>A insígnia “Excelência” aparece girando sobre raios dourados, com confete e +5 pontos, e depois acende na coleção do aluno.</p>
+<p class="src">Base: tabela de insígnias da configuração de gamificação</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="GAM-03" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">GAM-03</span><span class="kind">Fluxo · admin</span><button class="cp" data-piece="GAM-03" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Configurar a gamificação</h3>
+<p>O admin liga o sistema, os pontos por nível e as insígnias, abre “Pontos” e muda “Aprova um exame” de 5 para 10 pontos.</p>
+<p class="src">Base: tela Configuração de gamificação</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="GAM-04" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">GAM-04</span><span class="kind">Cena · admin e aluno</span><button class="cp" data-piece="GAM-04" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Ranking ao vivo</h3>
+<p>Os níveis configurados pelo admin ao fundo, o perfil do aluno no centro e a classificação à direita: a aluna ganha pontos, sobe para “Líder” e passa dois colegas no ranking.</p>
+<p class="src">Base: Configuração de gamificação, Classificações e Recompensas</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção 1100×520</p></div>
+</article>
+</div>
+</section>
+<!-- ================= ÁREA DO ALUNO ================= -->
+<section class="wrap feature" id="aluno">
+<div class="fhead">
+<div>
+<h2>Área do aluno</h2>
+<p>Mostra a experiência de quem estuda: aulas em vídeo no player da plataforma, um painel com todo o progresso, modo claro e escuro e tudo funcionando no celular.</p>
+</div>
+<span class="count">6 peças</span>
+</div>
+<div class="grid">
+<article class="tile">
+<sbn-anim lang="pt" piece="ALU-04" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">ALU-04</span><span class="kind">Micro-card · aluno</span><button class="cp" data-piece="ALU-04" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Certificado emitido</h3>
+<p>A moldura dourada se desenha, o nome da aluna é escrito no certificado, o selo carimba com confete e o download é feito.</p>
+<p class="src">Base: Lista de certificados da área do aluno</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="ALU-05" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">ALU-05</span><span class="kind">Micro-card · celular</span><button class="cp" data-piece="ALU-05" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Aula no celular</h3>
+<p>A mesma aula de química no celular: um toque dá play, a molécula se monta no vídeo, a aula é concluída com +5 pontos e o toque em “Próxima aula” avança na trilha.</p>
+<p class="src">Base: tela de aula da plataforma em versão mobile</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="ALU-06" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">ALU-06</span><span class="kind">Micro-card · aluno</span><button class="cp" data-piece="ALU-06" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Minhas notas</h3>
+<p>O histórico acadêmico carrega aprovados, reprovados e por corrigir. O exame pendente é corrigido, recebe nota 9,0 e os indicadores se atualizam na hora.</p>
+<p class="src">Base: Histórico acadêmico, aba Minhas notas</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="ALU-01" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">ALU-01</span><span class="kind">Fluxo · aluno</span><button class="cp" data-piece="ALU-01" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Aula em vídeo no player</h3>
+<p>A aluna dá play e a aula acontece dentro do player: uma animação curta de química monta a molécula da água, com legendas, barra de progresso e tempo andando. No fim, a aula é marcada como concluída na trilha lateral, soma pontos e o botão “Próxima aula” pulsa.</p>
+<p class="src">Base: tela de aula da plataforma (player, conteúdo e comentários)</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção ≈16:9</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="ALU-02" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">ALU-02</span><span class="kind">Fluxo · aluno</span><button class="cp" data-piece="ALU-02" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Painel do aluno em claro e escuro</h3>
+<p>A página inicial do aluno com cursos, grupos, comunidades, classificação semanal, exames, calendário e agenda. O cursor clica no botão de tema e a interface inteira passa do modo claro para o escuro, e depois volta.</p>
+<p class="src">Base: página inicial do aluno da plataforma</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção ≈16:9</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="ALU-03" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">ALU-03</span><span class="kind">Fluxo · aluno</span><button class="cp" data-piece="ALU-03" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Do desktop ao celular</h3>
+<p>A página “Meus cursos” encolhe do navegador para a tela de um celular e o layout se reorganiza de verdade: a barra lateral dá lugar ao menu e à navegação inferior, e os cursos passam de três colunas para uma, com rolagem.</p>
+<p class="src">Base: página Meus cursos da área do aluno</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção ≈16:9</p></div>
+</article>
+</div>
+</section>
+<!-- ================= COMUNIDADES ================= -->
+<section class="wrap feature" id="comunidades">
+<div class="fhead">
+<div>
+<h2>Comunidades</h2>
+<p>Mostra que a escola vira um lugar de encontro: os alunos postam, votam, comentam e convidam colegas, no computador e no celular.</p>
+</div>
+<span class="count">4 peças</span>
+</div>
+<div class="grid">
+<article class="tile">
+<sbn-anim lang="pt" piece="COM-01" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">COM-01</span><span class="kind">Micro-card · admin</span><button class="cp" data-piece="COM-01" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Convidar membros</h3>
+<p>“Convidar” abre o link de convite da comunidade, o link é copiado e os novos membros vão entrando: as fotos se somam e o contador sobe.</p>
+<p class="src">Base no Figma: seção Comunidades (convite e cabeçalho)</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="COM-02" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">COM-02</span><span class="kind">Micro-card · aluno</span><button class="cp" data-piece="COM-02" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Pesquisa na comunidade</h3>
+<p>Uma postagem do tipo pesquisa: as barras de votos crescem, a aluna escolhe a opção dela e os percentuais se atualizam conforme os votos chegam.</p>
+<p class="src">Base no Figma: tipos de postagem da comunidade (Pesquisa)</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="COM-03" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">COM-03</span><span class="kind">Micro-card · celular</span><button class="cp" data-piece="COM-03" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Comunidade no celular</h3>
+<p>O feed da comunidade no celular: um toque curte a postagem, um comentário chega na hora e uma notificação avisa que tem gente nova conversando.</p>
+<p class="src">Base no Figma: página da comunidade em versão mobile</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="COM-04" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">COM-04</span><span class="kind">Fluxo · aluno</span><button class="cp" data-piece="COM-04" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Postando na comunidade</h3>
+<p>A página completa da comunidade, com capa, avatar, membros, “Convidar”, abas e os tipos de postagem. A aluna escreve uma pergunta e publica, a postagem entra no topo do feed, recebe curtidas e uma colega responde na hora.</p>
+<p class="src">Base no Figma: página da comunidade (Postagens, Todos os membros, Formulário, Avaliações)</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção ≈16:9</p></div>
+</article>
+</div>
+</section>
+<!-- ================= CERTIFICADOS ================= -->
+<section class="wrap feature" id="certificados">
+<div class="fhead">
+<div>
+<h2>Certificados</h2>
+<p>Mostra que cada curso concluído vira um certificado bonito, com a cara da escola, emitido sozinho e fácil de validar.</p>
+</div>
+<span class="count">4 peças</span>
+</div>
+<div class="grid">
+<article class="tile">
+<sbn-anim lang="pt" piece="CERT-01" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">CERT-01</span><span class="kind">Micro-card · admin</span><button class="cp" data-piece="CERT-01" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Modelos de certificado</h3>
+<p>A escola passa pelos modelos (tecnológico, colorido e clássico), a prévia troca na hora e o modelo escolhido é aplicado ao curso.</p>
+<p class="src">Base no Figma: composição Certificados (três modelos)</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="CERT-02" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">CERT-02</span><span class="kind">Micro-card · celular</span><button class="cp" data-piece="CERT-02" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Validação por QR Code</h3>
+<p>Qualquer pessoa aponta o celular para o QR do certificado e confirma na hora que ele é válido, com nome, curso, data e código.</p>
+<p class="src">Base no Figma: ferramenta de QR da composição Certificados</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="CERT-03" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">CERT-03</span><span class="kind">Fluxo</span><button class="cp" data-piece="CERT-03" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Emissão automática</h3>
+<p>A aluna chega a 100% do curso, o certificado é gerado sozinho e chega por e-mail com o PDF anexado, sem ninguém da escola precisar fazer nada.</p>
+<p class="src">Base: certificados e automações da plataforma</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="CERT-04" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">CERT-04</span><span class="kind">Fluxo · admin</span><button class="cp" data-piece="CERT-04" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Configurando o certificado do curso</h3>
+<p>As configurações avançadas do curso, na aba Certificados. O admin escolhe o modelo Artístico, troca a cor do texto para violeta, muda a fonte, liga o código QR e salva, com a pré-visualização atualizando a cada passo.</p>
+<p class="src">Base: modal “Configuraciones avanzadas” da plataforma, aba Certificados</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção ≈16:9</p></div>
+</article>
+</div>
+</section>
+<!-- ================= USUÁRIOS ================= -->
+<section class="wrap feature" id="usuarios">
+<div class="fhead">
+<div>
+<h2>Gestão de usuários</h2>
+<p>Mostra que a escola tem controle total dos alunos: lista completa, filtros avançados para achar qualquer grupo, perfis detalhados e importação em massa.</p>
+</div>
+<span class="count">4 peças</span>
+</div>
+<div class="grid">
+<article class="tile">
+<sbn-anim lang="pt" piece="USR-01" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">USR-01</span><span class="kind">Micro-card · admin</span><button class="cp" data-piece="USR-01" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Filtros avançados</h3>
+<p>O admin escolhe “Últimos 30 dias”, cria uma condição por curso (“Química geral”) e aplica: a lista chega aos 34 alunos certos.</p>
+<p class="src">Base: painel Filtros avançados da Lista de usuários</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="USR-02" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">USR-02</span><span class="kind">Micro-card · admin</span><button class="cp" data-piece="USR-02" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Perfil do usuário</h3>
+<p>O perfil com nível, pontos, dados e cursos. O admin copia o e-mail da aluna e matricula ela em um curso novo, que entra na lista na hora.</p>
+<p class="src">Base: painel de perfil da Lista de usuários</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="USR-03" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">USR-03</span><span class="kind">Micro-card · admin</span><button class="cp" data-piece="USR-03" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Importar usuários</h3>
+<p>A planilha é arrastada para o painel, o arquivo é lido, as colunas são reconhecidas uma a uma e 248 alunos entram na plataforma de uma vez.</p>
+<p class="src">Base: botão Importar da Lista de usuários</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="USR-04" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">USR-04</span><span class="kind">Fluxo · admin</span><button class="cp" data-piece="USR-04" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Lista de usuários com filtros</h3>
+<p>A lista completa com busca, colunas, filtros, e-mail e exportação. O admin abre os filtros avançados, escolhe “Últimos 30 dias” e o curso “Química geral”, aplica, e a tabela fica só com quem importa. Depois abre o perfil da Marina para ver os cursos e o progresso.</p>
+<p class="src">Base: Lista de usuários, Filtros avançados e painel de perfil da plataforma</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção ≈16:9</p></div>
+</article>
+</div>
+</section>
+<!-- ================= AUTOMAÇÕES ================= -->
+<section class="wrap feature" id="automacoes">
+<div class="fhead">
+<div>
+<h2>Automações</h2>
+<p>Mostra que a escola trabalha sozinha: e-mails, matrículas, grupos e etiquetas acontecem automaticamente a partir do que o aluno faz, sem ninguém precisar estar online.</p>
+</div>
+<span class="count">4 peças</span>
+</div>
+<div class="grid">
+<article class="tile">
+<sbn-anim lang="pt" piece="AUT-01" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">AUT-01</span><span class="kind">Micro-card · admin</span><button class="cp" data-piece="AUT-01" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Crie uma regra em segundos</h3>
+<p>“Quando o pagamento for aprovado, enviar o e-mail de acesso.” O admin escolhe o evento, o tipo e o e-mail, salva, e a automação já fica ativa.</p>
+<p class="src">Base: modal Criar automatização da plataforma</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="AUT-02" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">AUT-02</span><span class="kind">Micro-card · admin</span><button class="cp" data-piece="AUT-02" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Trabalhando enquanto você dorme</h3>
+<p>De madrugada, as compras chegam e a automação responde sozinha: cada aluno recebe o acesso na hora, o contador de e-mails sobe e o relógio mostra que ninguém precisou estar online.</p>
+<p class="src">Base: automações de e-mail da plataforma</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="AUT-03" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">AUT-03</span><span class="kind">Fluxo</span><button class="cp" data-piece="AUT-03" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Uma inscrição, quatro tarefas</h3>
+<p>O Pedro se inscreve e as automações rodam em cadeia: grupo, comunidade, etiqueta e e-mail de boas-vindas, tudo concluído em segundos, sem trabalho manual.</p>
+<p class="src">Base: ações “Realizar operação” das automatizações</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="AUT-04" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">AUT-04</span><span class="kind">Fluxo · admin</span><button class="cp" data-piece="AUT-04" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Criando uma automação de operação</h3>
+<p>A lista de automações da escola. O admin cria uma nova: quando um aluno finaliza “Química geral”, ele é inscrito automaticamente em “Química avançada”. A regra entra no topo da lista, pronta para rodar.</p>
+<p class="src">Base: tela Automatizaciones e modal Criar automatização (Realizar operação)</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção ≈16:9</p></div>
+</article>
+</div>
+</section>
+<!-- ================= RELATÓRIOS ================= -->
+<section class="wrap feature" id="relatorios">
+<div class="fhead">
+<div>
+<h2>Relatórios e análises</h2>
+<p>Mostra que qualquer pessoa da escola entende os números: basta perguntar em português e a IA monta o relatório, com gráficos, indicadores e o histórico de tudo o que mudou.</p>
+</div>
+<span class="count">7 peças</span>
+</div>
+<div class="grid g6">
+<article class="tile">
+<sbn-anim lang="pt" piece="REL-01" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">REL-01</span><span class="kind">Micro-card · admin</span><button class="cp" data-piece="REL-01" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Pergunte à IA</h3>
+<p>O admin escreve a pergunta em português, a IA monta o relatório sozinha: gráfico de matrículas por curso com os indicadores prontos.</p>
+<p class="src">Base: campo “Pregunta lo que quieras sobre tus datos” das Análises</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="REL-02" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">REL-02</span><span class="kind">Micro-card · admin</span><button class="cp" data-piece="REL-02" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Um clique, outro gráfico</h3>
+<p>Os mesmos dados viram barras, linha, rosca, área ou tabela: cada tipo de gráfico se desenha na hora, sem refazer o relatório.</p>
+<p class="src">Base: seletor Tipo de gráfico das Análises</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="REL-03" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">REL-03</span><span class="kind">Micro-card · admin</span><button class="cp" data-piece="REL-03" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Relatórios recomendados</h3>
+<p>Atalhos prontos para as perguntas mais comuns: um clique em “Taxa de conclusão” ou “Status dos alunos” e os números e o gráfico já aparecem.</p>
+<p class="src">Base: faixa “Recomendado” das Análises</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile half">
+<sbn-anim lang="pt" piece="REL-04" ratio="6/5" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">REL-04</span><span class="kind">Micro-card · admin</span><button class="cp" data-piece="REL-04" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Audit trail: quem mudou o quê</h3>
+<p>Cada alteração feita na escola fica registrada com quem fez, o que mudou, o valor antigo e o novo. As mudanças chegam em tempo real e o histórico pode ser exportado.</p>
+<p class="src">Base: aba Audit-Trail das Análises</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile half">
+<sbn-anim lang="pt" piece="REL-05" ratio="6/5" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">REL-05</span><span class="kind">Micro-card · admin</span><button class="cp" data-piece="REL-05" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Filtros e cores</h3>
+<p>Um filtro “Mais de 5” limpa os cursos pequenos do gráfico, e uma cor nova da paleta deixa o relatório com a cara da escola.</p>
+<p class="src">Base: Filtros e Cores da configuração do relatório</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="REL-06" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">REL-06</span><span class="kind">Fluxo · admin</span><button class="cp" data-piece="REL-06" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Análises com IA, na tela completa</h3>
+<p>A tela de Análises com a pergunta para a IA, os relatórios recomendados, a configuração e a vista prévia. O admin pergunta “Como está o progresso dos alunos?”, a IA preenche a configuração sozinha (variável Estado, gráfico circular), o relatório aparece e é salvo no Dashboard.</p>
+<p class="src">Base: Análises &gt; Reportes (versão nova, ambiente de staging)</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção ≈16:9</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="REL-07" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">REL-07</span><span class="kind">Cena</span><button class="cp" data-piece="REL-07" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Seus dados, em um só lugar</h3>
+<p>Composição dos componentes de Análises: a pergunta para a IA no topo, gráficos se redesenhando, indicadores contando, recomendados e o audit trail. Pensada para o hero da página de relatórios.</p>
+<p class="src">Base: componentes de Análises (Reportes e Audit-Trail)</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção 1100×520</p></div>
+</article>
+</div>
+</section>
+<!-- ================= MARKETPLACE ================= -->
+<section class="wrap feature" id="marketplace">
+<div class="fhead">
+<div>
+<h2>Marketplace</h2>
+<p>Mostra que o marketplace é o ponto de encontro: quem cria vende para mais gente, empresas compram treinamentos prontos e afiliados ganham comissão divulgando.</p>
+</div>
+<span class="count">7 peças</span>
+</div>
+<div class="grid g6">
+<article class="tile wide">
+<sbn-anim lang="pt" piece="MKT-01" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">MKT-01</span><span class="kind">Diagrama</span><button class="cp" data-piece="MKT-01" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Como o marketplace conecta todo mundo</h3>
+<p>Em quatro passos: criadores publicam cursos; empresas compram treinamentos prontos e atribuem à equipe; afiliados divulgam com link, trazem novos alunos e ganham comissão; e o criador recebe a receita. No fim, cada perfil mostra o valor que ganha.</p>
+<p class="src">Base: proposta de valor do Marketplace Sabionet</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção ≈16:9</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="MKT-02" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">MKT-02</span><span class="kind">Diagrama</span><button class="cp" data-piece="MKT-02" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>O marketplace em uma imagem</h3>
+<p>A versão curta do diagrama: criadores publicam, empresas compram e afiliados divulgam. Cada ligação acende com o ganho de cada perfil, e o marketplace pulsa no centro.</p>
+<p class="src">Base: proposta de valor do Marketplace Sabionet</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile two">
+<sbn-anim lang="pt" piece="MKT-03" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">MKT-03</span><span class="kind">Diagrama</span><button class="cp" data-piece="MKT-03" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>O marketplace montado em equipe</h3>
+<p>No estilo de um quadro colaborativo: três pessoas conectam as peças ao vivo. Criadores e afiliados levam ao marketplace, que vende para empresas e novos alunos; empresas atribuem aos colaboradores, e cada venda gera comissão para o afiliado.</p>
+<p class="src">Base: proposta de valor do Marketplace Sabionet</p>
+<p class="use">Uso recomendado: desktop e tablet · proporção 5:3</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="MKT-04" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">MKT-04</span><span class="kind">Micro-card · criador</span><button class="cp" data-piece="MKT-04" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Publicar no marketplace</h3>
+<p>Os requisitos vão sendo cumpridos um a um, o criador liga “Adicionar curso ao Marketplace” e o programa de afiliados, salva, e o curso passa a ser vendido para milhares de usuários.</p>
+<p class="src">Base: Editar curso &gt; Marketplace e Afiliados</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="MKT-05" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">MKT-05</span><span class="kind">Micro-card · aluno</span><button class="cp" data-piece="MKT-05" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Encontre o curso certo</h3>
+<p>Categoria, faixa de preço e classificação mínima: a cada filtro, o número de resultados cai e só ficam os cursos que combinam com a busca.</p>
+<p class="src">Base: painel Filtros do Marketplace</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="MKT-06" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">MKT-06</span><span class="kind">Micro-card · celular</span><button class="cp" data-piece="MKT-06" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Comprar pelo celular</h3>
+<p>A página do curso no marketplace pelo celular: capa, avaliação, oferta, o que o curso inclui e avaliações. Um toque em “Comprar curso” e o acesso é liberado na hora.</p>
+<p class="src">Base: detalhe do curso no Marketplace</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="MKT-07" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">MKT-07</span><span class="kind">Fluxo · aluno</span><button class="cp" data-piece="MKT-07" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>A vitrine do marketplace</h3>
+<p>A tela completa: banner com destaques trocando, busca e filtros, recomendações em carrossel e academias. O cursor navega pelos cursos, abre “Gestão de projetos na prática”, vê oferta, o que inclui e as avaliações, e compra.</p>
+<p class="src">Base: Marketplace da plataforma (vitrine e detalhe do curso)</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção ≈16:9</p></div>
+</article>
+</div>
+</section>
+<!-- ================= AFILIADOS ================= -->
+<section class="wrap feature" id="afiliados">
+<div class="fhead">
+<div>
+<h2>Afiliados</h2>
+<p>Mostra que qualquer pessoa pode ganhar dinheiro indicando cursos: escolhe no marketplace, pega o link, divulga e recebe comissão automática a cada venda.</p>
+</div>
+<span class="count">4 peças</span>
+</div>
+<div class="grid">
+<article class="tile">
+<sbn-anim lang="pt" piece="AFI-01" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">AFI-01</span><span class="kind">Micro-card · afiliado</span><button class="cp" data-piece="AFI-01" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Afilie-se e pegue seu link</h3>
+<p>O afiliado encontra um curso com 30% de comissão, solicita afiliação, é aprovado e recebe o link exclusivo para divulgar. Um clique e o link está copiado.</p>
+<p class="src">Base: Marketplace do afiliado (comissão e atribuição)</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="AFI-02" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">AFI-02</span><span class="kind">Micro-card · afiliado</span><button class="cp" data-piece="AFI-02" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Comissão a cada venda</h3>
+<p>Cada compra feita pelo link do afiliado entra na lista com a comissão ao lado, o saldo disponível sobe e o gráfico cresce, com a transferência já programada.</p>
+<p class="src">Base: painel do afiliado (saldo e vendas)</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="AFI-03" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">AFI-03</span><span class="kind">Micro-card · celular</span><button class="cp" data-piece="AFI-03" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Divulgue de qualquer lugar</h3>
+<p>Pelo celular, o afiliado toca em “Compartilhar meu link”, escolhe onde divulgar e copia o link. Logo em seguida, os cliques do dia começam a subir.</p>
+<p class="src">Base: produtos do afiliado</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile wide">
+<sbn-anim lang="pt" piece="AFI-04" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">AFI-04</span><span class="kind">Fluxo · afiliado</span><button class="cp" data-piece="AFI-04" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>O painel do afiliado</h3>
+<p>O início do afiliado: os passos para começar vão sendo concluídos, a conta de pagamento é conectada e as primeiras vendas chegam. O saldo, o total em vendas e as transferências sobem, o gráfico de desempenho se desenha e as atividades entram na lateral.</p>
+<p class="src">Base: painel inicial do afiliado da plataforma</p>
+<p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção ≈16:9</p></div>
+</article>
+</div>
+</section>
+<!-- ================= INTEGRAÇÕES E PAGAMENTOS ================= -->
+<section class="wrap feature" id="integracoes">
+<div class="fhead">
+<div>
+<h2>Integrações e pagamentos</h2>
+<p>Mostra que a Sabionet conversa com as ferramentas que a escola já usa e recebe pagamentos de qualquer lugar, com os métodos certos para cada país.</p>
+</div>
+<span class="count">4 peças</span>
+</div>
+<div class="grid g6">
+<article class="tile two">
+<sbn-anim lang="pt" piece="INT-01" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">INT-01</span><span class="kind">Diagrama</span><button class="cp" data-piece="INT-01" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Tudo conectado à sua escola</h3>
+<p>A Sabionet no centro e as integrações em volta: Google Analytics, Tag Manager, WhatsApp, Facebook Pixel, TikTok, Zapier, Mailchimp, LTI, HubSpot e IA. Uma de cada vez, a ligação acende e aparece o que ela resolve.</p>
+<p class="src">Base: tela Integrações da plataforma</p>
+<p class="use">Uso recomendado: desktop e tablet · proporção 5:3</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="INT-02" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">INT-02</span><span class="kind">Micro-card · admin</span><button class="cp" data-piece="INT-02" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Integração em um minuto</h3>
+<p>O admin clica em “Fazer integração agora”, cola o ID de medição e salva. Pronto: os dados começam a chegar ao vivo.</p>
+<p class="src">Base: Integrações &gt; Google Analytics</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile">
+<sbn-anim lang="pt" piece="PAY-01" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">PAY-01</span><span class="kind">Micro-card · admin</span><button class="cp" data-piece="PAY-01" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Receba do mundo todo</h3>
+<p>Pagamentos chegam de vários países, cada um no método local (Pix, OXXO, Yape, Apple Pay, PSE), e caem convertidos no mesmo saldo da Sabionet Payments.</p>
+<p class="src">Base: Sabionet Payments (moeda local e métodos por país)</p>
+<p class="use">Uso recomendado: desktop e celular · proporção 4:5</p></div>
+</article>
+<article class="tile two">
+<sbn-anim lang="pt" piece="PAY-02" theme="light"></sbn-anim>
+<div class="cap">
+<div class="cap-top"><span class="code">PAY-02</span><span class="kind">Fluxo · admin</span><button class="cp" data-piece="PAY-02" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg><span>Copiar código</span></button></div>
+<h3>Todos os meios de pagamento em um lugar</h3>
+<p>A tela de Pagamentos: o admin conecta a Sabionet Payments como método principal (com Apple Pay, Google Pay, moeda local e compra em 1 clique) e liga os métodos secundários: PayPal, Mercado Pago, Stripe e PayU.</p>
+<p class="src">Base: tela Pagamentos &gt; Resumo</p>
+<p class="use">Uso recomendado: desktop e tablet · proporção 5:3</p></div>
+</article>
+</div>
+</section>
+<!-- ================= BACKLOG ================= -->
+<section class="wrap feature" id="proximas">
+<div class="fhead">
+<div>
+<h2>Próximas features</h2>
+<p>Features que já têm telas ou componentes no Figma e podem seguir o mesmo formato. A sugestão de peças é um ponto de partida para validar com o Jhonny.</p>
+</div>
+</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Feature</th><th>Micro-card sugerido</th><th>Fluxo sugerido</th><th>Cena sugerida</th><th>No Figma</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Primeiros passos</td><td>Checklist de configuração sendo concluído</td><td>Escolher cor, logo e publicar a escola</td><td class="mut">Opcional</td><td class="mut">setup-school, color-picker, steps-content</td><td><span class="st">A fazer</span></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- ================= RULES ================= -->
+<section class="wrap feature" id="regras">
+<div class="fhead"><div><h2>Regras visuais</h2><p>O que mantém todas as peças com cara de uma família só. Os valores vêm dos componentes do Figma.</p></div></div>
+<div class="rules">
+<div class="rule">
+<h3>Cores</h3>
+<div class="sw">
+<div><i style="background:#7c3aed"></i><span>Violeta<small>#7C3AED</small></span></div>
+<div><i style="background:#ec4899"></i><span>Rosa<small>#EC4899</small></span></div>
+<div><i style="background:#d946ef"></i><span>Magenta<small>#D946EF</small></span></div>
+<div><i style="background:#2d2d30"></i><span>Texto<small>#2D2D30</small></span></div>
+<div><i style="background:#1e1e2e"></i><span>Card escuro<small>#1E1E2E</small></span></div>
+<div><i style="background:#121218"></i><span>Fundo escuro<small>#121218</small></span></div>
+</div>
+</div>
+<div class="rule">
+<h3>Forma e tipografia</h3>
+<ul>
+<li>Poppins em tudo: 700 para títulos de card, 600 para botões, 500 para itens de lista.</li>
+<li>Cards com 24px de raio, blocos internos com 10 a 14px e botões em pílula.</li>
+<li>Texto secundário vira barra cinza. Só o que conta a história tem texto real.</li>
+<li>Cada feature tem sua cor de fundo: violeta para cursos, rosa para páginas.</li>
+</ul>
+</div>
+<div class="rule">
+<h3>Movimento</h3>
+<ul>
+<li>Entradas de 300 a 450ms, sempre desacelerando no final.</li>
+<li>Cada loop dura de 6 a 9s e segura o estado final por cerca de 2s.</li>
+<li>O cursor só aparece quando há um clique a mostrar.</li>
+<li>Nada anima fora da tela, e quem pede menos movimento vê o estado final parado.</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<footer class="wrap">Biblioteca Sabionet Anim v1.0.2. Os logos da Sabionet e dos meios de pagamento são os oficiais. As fotos ainda são provisórias: os fundos em degradê dos heros serão trocados pelas imagens do Figma na versão final.</footer>
+<script src="/v/1.0.2/sabionet-anim.js"></script>
+<script>
+(function(){
+  const main=document.querySelector('main');
+  let theme='light', lang='pt';
+  const hosts=()=>document.querySelectorAll('sbn-anim');
+  const setTheme=t=>{theme=t; hosts().forEach(h=>h.setAttribute('theme',t)); const dark=t==='dark'||(t==='auto'&&matchMedia('(prefers-color-scheme: dark)').matches); main.dataset.assets=dark?'dark':'light';
+    document.querySelectorAll('.theme-btns button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===t?'true':'false')); try{localStorage.setItem('sbn-theme',t)}catch(e){}};
+  document.querySelectorAll('.theme-btns button').forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.mode)));
+  try{const t=localStorage.getItem('sbn-theme'); if(t) setTheme(t)}catch(e){}
+  async function copyText(txt){ try{ await navigator.clipboard.writeText(txt); return true }catch(e){ const ta=document.createElement('textarea'); ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); let ok=false; try{ok=document.execCommand('copy')}catch(_){} ta.remove(); return ok } }
+  function flashBtn(b,ok){ const sp=b.querySelector('span'); const old=sp.textContent; b.classList.add('ok'); sp.textContent=ok?'Copiado!':'Selecione e copie'; setTimeout(()=>{b.classList.remove('ok'); sp.textContent=old},1600) }
+  document.addEventListener('click',async e=>{
+    const b=e.target.closest('.cp'); if(!b) return;
+    let txt;
+    if(b.dataset.piece) txt=`<sbn-anim piece="${b.dataset.piece}" theme="${theme}" lang="${lang}"></sbn-anim>`;
+    else if(b.dataset.copyEl) txt=document.getElementById(b.dataset.copyEl).textContent;
+    const ok=await copyText(txt); flashBtn(b,ok);
+    if(!ok) window.prompt('Copie o código:',txt);
+  });
+})();
+</script>
+</body>
+</html>
