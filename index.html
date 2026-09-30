@@ -129,6 +129,39 @@ main[data-assets="dark"] sbn-anim{border-color:#23222d}
 .opts code{font:600 12px ui-monospace,Menlo,Consolas,monospace;color:var(--accent)}
 .inst .full{grid-column:1/-1}
 @media (max-width:980px){.inst{grid-template-columns:1fr}}
+.secnav{position:relative}
+.secbtn{display:flex;align-items:center;gap:10px;height:40px;padding:0 12px 0 10px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:12px;font:500 13px 'Poppins',sans-serif;cursor:pointer;max-width:min(420px,52vw)}
+.secbtn>svg{width:16px;height:16px;flex:none;color:var(--accent)}
+.secbtn .secl{color:var(--muted);flex:none}
+.secbtn .cur-sec{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-left:10px;border-left:1px solid var(--line)}
+.secbtn .chv{width:14px;height:14px;color:var(--muted);flex:none;transition:transform .2s}
+.secbtn[aria-expanded="true"] .chv{transform:rotate(180deg)}
+.secbtn:hover{border-color:var(--accent)}
+.secpanel{position:absolute;left:0;top:calc(100% + 8px);width:min(780px,calc(100vw - 32px));max-height:min(70vh,620px);overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:0 24px 60px rgba(20,16,40,.18);padding:14px;z-index:40}
+.secpanel[hidden]{display:none}
+.secq-w{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:0 10px;height:40px;margin-bottom:12px;background:var(--bg)}
+.secq-w svg{width:15px;height:15px;color:var(--muted);flex:none}
+.secq-w input{flex:1;min-width:0;border:0;background:transparent;font:400 13px 'Poppins',sans-serif;color:var(--ink);outline:none}
+.secq-w kbd{font:600 10.5px 'Poppins',sans-serif;border:1px solid var(--line);border-radius:5px;padding:2px 6px;color:var(--muted)}
+.secgrp{margin-bottom:12px}
+.secgrp>b{display:block;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:4px 4px 6px}
+.secitems{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+.secitems a,.piecelist a{display:flex;align-items:center;justify-content:space-between;gap:8px;text-decoration:none;color:var(--ink);font-size:13px;font-weight:500;padding:9px 10px;border-radius:9px}
+.secitems a:hover,.piecelist a:hover,.secitems a:focus-visible,.piecelist a:focus-visible,.piecelist a.hi{background:var(--bg);outline:none}
+.secitems a.on{background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent)}
+.secitems a small,.piecelist a small{font-size:11.5px;color:var(--muted);font-weight:500;white-space:nowrap}
+.piecelist a b{font-weight:700;margin-right:8px}
+.piecelist a span{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.piecelist .empty{padding:14px 10px;color:var(--muted);font-size:13px}
+.secarrows{display:flex;gap:4px}
+.secarrows button{width:32px;height:32px;border-radius:9px;border:1px solid var(--line);background:var(--panel);color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.secarrows button svg{width:15px;height:15px}
+.secarrows button:disabled{opacity:.35;cursor:default}
+.barsp{flex:1}
+@media (max-width:760px){.secitems{grid-template-columns:repeat(2,minmax(0,1fr))}.secbtn .secl{display:none}.secarrows{display:none}.seg>span{display:none}}
+@media (max-width:520px){.secitems{grid-template-columns:1fr}.lang-btns{display:none}}
+section[id]{scroll-margin-top:76px}
+@media (max-width:520px){.bar .wrap{gap:8px;padding:0 12px}.seg-btns button{padding:6px 9px;font-size:12px}.secbtn{max-width:44vw;padding:0 10px}.secbtn .cur-sec{border-left:0;padding-left:0}}
 </style>
 </head>
 <body>
@@ -145,24 +178,16 @@ main[data-assets="dark"] sbn-anim{border-color:#23222d}
 </header>
 <div class="bar">
 <div class="wrap">
-<nav aria-label="Seções" class="nav">
-<a href="#instalar">Como usar</a>
-      <a href="#curso">Criação de curso</a>
-<a href="#lp">Landing page builder</a>
-<a href="#checkout">Checkout</a>
-<a href="#gamificacao">Gamificação</a>
-<a href="#aluno">Área do aluno</a>
-<a href="#comunidades">Comunidades</a>
-<a href="#certificados">Certificados</a>
-<a href="#usuarios">Usuários</a>
-<a href="#automacoes">Automações</a>
-<a href="#relatorios">Relatórios</a>
-<a href="#marketplace">Marketplace</a>
-<a href="#afiliados">Afiliados</a>
-<a href="#integracoes">Integrações</a>
-<a href="#proximas">Próximas features</a>
-<a href="#regras">Regras visuais</a>
-</nav>
+<div class="secnav">
+  <button type="button" class="secbtn" aria-expanded="false" aria-controls="secpanel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span class="secl">Seções</span><span class="cur-sec">Como usar</span><svg class="chv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+  <div class="secpanel" id="secpanel" role="dialog" aria-label="Navegar pelas seções" hidden>
+    <div class="secq-w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><input type="search" class="secq" placeholder="Buscar seção ou peça (ex.: MKT-08, checkout)" aria-label="Buscar seção ou peça"><kbd>Esc</kbd></div>
+    <div class="seclist"></div>
+    <div class="piecelist" hidden></div>
+  </div>
+</div>
+<div class="secarrows"><button type="button" class="sa-prev" aria-label="Seção anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button><button type="button" class="sa-next" aria-label="Próxima seção"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button></div>
+<div class="barsp"></div>
 <div class="seg"><span>Tema</span>
       <div class="seg-btns theme-btns" role="group" aria-label="Tema das peças">
         <button type="button" data-mode="light" aria-pressed="true">Claro</button>
@@ -182,7 +207,7 @@ main[data-assets="dark"] sbn-anim{border-color:#23222d}
   <div class="inst">
     <div class="step"><h3><i>1</i>Instale a biblioteca uma vez</h3>
       <p>No Webflow, em <b>Configurações do site › Código personalizado › Footer code</b>, cole a linha abaixo e publique.</p>
-      <div class="codeblk"><button type="button" class="cp" data-copy-el="c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg><span>Copiar</span></button><span id="c1">&lt;script src="https://sabionet-anim.vercel.app/v/1.1.0/sabionet-anim.js" defer&gt;&lt;/script&gt;</span></div></div>
+      <div class="codeblk"><button type="button" class="cp" data-copy-el="c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg><span>Copiar</span></button><span id="c1">&lt;script src="https://sabionet-anim.vercel.app/v/1.2.0/sabionet-anim.js" defer&gt;&lt;/script&gt;</span></div></div>
     <div class="step"><h3><i>2</i>Cole a peça onde quiser</h3>
       <p>Adicione um elemento <b>Embed</b> na página e cole o código da peça. Cada card deste catálogo tem o botão <b>Copiar código</b>, que já copia com o tema e o idioma selecionados no topo.</p>
       <div class="codeblk"><span>&lt;sbn-anim piece="CUR-01" theme="light" lang="pt"&gt;&lt;/sbn-anim&gt;</span></div></div>
@@ -741,7 +766,7 @@ main[data-assets="dark"] sbn-anim{border-color:#23222d}
 <h2>Marketplace</h2>
 <p>Mostra que o marketplace é o ponto de encontro: quem cria vende para mais gente, empresas compram treinamentos prontos e afiliados ganham comissão divulgando.</p>
 </div>
-<span class="count">7 peças</span>
+<span class="count">8 peças</span>
 </div>
 <div class="grid g6">
 <article class="tile wide">
@@ -771,6 +796,16 @@ main[data-assets="dark"] sbn-anim{border-color:#23222d}
 <p class="src">Base: proposta de valor do Marketplace Sabionet</p>
 <p class="use">Uso recomendado: desktop e tablet · proporção 5:3</p></div>
 </article>
+    <article class="tile wide">
+      <sbn-anim piece="MKT-08" theme="light" lang="pt"></sbn-anim>
+      <div class="cap">
+        <div class="cap-top"><span class="code">MKT-08</span><span class="kind">Diagrama · criador</span><button type="button" class="cp" data-piece="MKT-08"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg><span>Copiar código</span></button></div>
+        <h3>O caminho do criador</h3>
+        <p>Um fluxo pensado para quem cria: o curso fica pronto com IA, entra na academia própria com a marca do criador e é publicado no marketplace, onde aparece para estudantes e usuários da Sabionet. Dali, estudantes encontram, empresas compram licenças e afiliados vendem com comissão, e todas as vendas voltam para o criador.</p>
+        <p class="src">Base: proposta de valor do Marketplace Sabionet para criadores</p>
+        <p class="use">Uso recomendado: desktop (no celular, use uma peça pequena) · proporção ≈16:9</p>
+      </div>
+    </article>
 <article class="tile">
 <sbn-anim lang="pt" piece="MKT-04" theme="light"></sbn-anim>
 <div class="cap">
@@ -958,8 +993,8 @@ main[data-assets="dark"] sbn-anim{border-color:#23222d}
 </div>
 </section>
 </main>
-<footer class="wrap">Biblioteca Sabionet Anim v1.1.0. Os logos da Sabionet e dos meios de pagamento são os oficiais. As fotos ainda são provisórias: os fundos em degradê dos heros serão trocados pelas imagens do Figma na versão final.</footer>
-<script src="/v/1.1.0/sabionet-anim.js"></script>
+<footer class="wrap">Biblioteca Sabionet Anim v1.2.0. Os logos da Sabionet e dos meios de pagamento são os oficiais. As fotos ainda são provisórias: os fundos em degradê dos heros serão trocados pelas imagens do Figma na versão final.</footer>
+<script src="/v/1.2.0/sabionet-anim.js"></script>
 <script>
 (function(){
   const main=document.querySelector('main');
@@ -982,6 +1017,40 @@ main[data-assets="dark"] sbn-anim{border-color:#23222d}
     const ok=await copyText(txt); flashBtn(b,ok);
     if(!ok) window.prompt('Copie o código:',txt);
   });
+})();
+
+(function(){
+  const btn=document.querySelector('.secbtn'), panel=document.getElementById('secpanel'), q=panel.querySelector('.secq'), list=panel.querySelector('.seclist'), plist=panel.querySelector('.piecelist'), cur=btn.querySelector('.cur-sec');
+  const secs=[...document.querySelectorAll('section.feature[id], section[id].wrap')].filter((s,i,a)=>a.indexOf(s)===i && s.querySelector('h2'));
+  const info=secs.map(s=>({id:s.id,name:s.querySelector('h2').textContent.trim(),count:(s.querySelector('.fhead .count')||{}).textContent||''}));
+  const REF=['proximas','regras'], START=['instalar'];
+  const grp=(t,items)=>items.length?`<div class="secgrp"><b>${t}</b><div class="secitems">${items.map(i=>`<a href="#${i.id}" data-id="${i.id}"><span>${i.name}</span><small>${i.count.replace(' peças','').replace(' peça','')}</small></a>`).join('')}</div></div>`:'';
+  list.innerHTML=grp('Começar',info.filter(i=>START.includes(i.id)))+grp('Features',info.filter(i=>!START.includes(i.id)&&!REF.includes(i.id)))+grp('Referência',info.filter(i=>REF.includes(i.id)));
+  const pieces=[...document.querySelectorAll('article.tile')].map(a=>({code:(a.querySelector('.code')||{}).textContent||'',title:(a.querySelector('.cap h3')||{}).textContent||'',el:a,sec:(a.closest('section')||{}).id}));
+  const secName=id=>(info.find(i=>i.id===id)||{}).name||'';
+  const open=o=>{panel.hidden=!o; btn.setAttribute('aria-expanded',o?'true':'false'); if(o){q.value=''; filter(''); setTimeout(()=>q.focus(),20)} };
+  btn.addEventListener('click',e=>{e.stopPropagation(); open(panel.hidden)});
+  document.addEventListener('click',e=>{ if(!panel.hidden && !panel.contains(e.target) && !btn.contains(e.target)) open(false) });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape' && !panel.hidden){ open(false); btn.focus() } if((e.key==='k'||e.key==='K')&&(e.metaKey||e.ctrlKey)){ e.preventDefault(); open(true) } });
+  const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  function filter(v){ const t=norm(v.trim());
+    if(!t){ list.hidden=false; plist.hidden=true; return }
+    const secHits=info.filter(i=>norm(i.name).includes(t));
+    const pHits=pieces.filter(p=>norm(p.code+' '+p.title+' '+secName(p.sec)).includes(t)).slice(0,40);
+    list.hidden=true; plist.hidden=false;
+    plist.innerHTML=(secHits.map(i=>`<a href="#${i.id}"><span><b>Seção</b>${i.name}</span><small>${i.count}</small></a>`).join('')+pHits.map(p=>`<a href="#" data-piece="${p.code}"><span><b>${p.code}</b>${p.title}</span><small>${secName(p.sec)}</small></a>`).join(''))||'<div class="empty">Nada encontrado.</div>';
+    const f=plist.querySelector('a'); if(f) f.classList.add('hi');
+  }
+  q.addEventListener('input',()=>filter(q.value));
+  q.addEventListener('keydown',e=>{ if(e.key==='Enter'){ const a=(plist.hidden?list:plist).querySelector('a.hi')||(plist.hidden?list:plist).querySelector('a'); if(a){ e.preventDefault(); a.click() } } });
+  panel.addEventListener('click',e=>{ const a=e.target.closest('a'); if(!a) return; if(a.dataset.piece){ e.preventDefault(); const p=pieces.find(x=>x.code===a.dataset.piece); open(false); if(p){ p.el.scrollIntoView({behavior:'smooth',block:'center'}); p.el.animate([{boxShadow:'0 0 0 0 rgba(124,58,237,0)'},{boxShadow:'0 0 0 6px rgba(124,58,237,.35)'},{boxShadow:'0 0 0 0 rgba(124,58,237,0)'}],{duration:1400,delay:500}) } } else open(false) });
+  // scrollspy + setas
+  const prev=document.querySelector('.sa-prev'), next=document.querySelector('.sa-next'); let idx=0;
+  function setActive(i){ idx=i; cur.textContent=info[i].name; list.querySelectorAll('a').forEach(a=>a.classList.toggle('on',a.dataset.id===info[i].id)); prev.disabled=i<=0; next.disabled=i>=info.length-1 }
+  function spy(){ const y=innerHeight*0.3; let k=0; secs.forEach((s,i)=>{ if(s.getBoundingClientRect().top<=y) k=i }); if(k!==idx||!cur.textContent) setActive(k) }
+  addEventListener('scroll',()=>requestAnimationFrame(spy),{passive:true}); spy(); setActive(idx);
+  const go=i=>{ if(i<0||i>=secs.length) return; secs[i].scrollIntoView({behavior:'smooth',block:'start'}) };
+  prev.addEventListener('click',()=>go(idx-1)); next.addEventListener('click',()=>go(idx+1));
 })();
 </script>
 </body>
