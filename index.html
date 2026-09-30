@@ -171,7 +171,7 @@ main[data-assets="dark"] sbn-anim{border-color:#23222d}
       </div>
       <div class="seg-btns lang-btns" role="group" aria-label="Idioma">
         <button type="button" data-lang="pt" aria-pressed="true">PT</button>
-        <button type="button" data-lang="es" aria-pressed="false" disabled title="Em breve">ES</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
       </div>
     </div>
 </div>
@@ -182,7 +182,7 @@ main[data-assets="dark"] sbn-anim{border-color:#23222d}
   <div class="inst">
     <div class="step"><h3><i>1</i>Instale a biblioteca uma vez</h3>
       <p>No Webflow, em <b>Configurações do site › Código personalizado › Footer code</b>, cole a linha abaixo e publique.</p>
-      <div class="codeblk"><button type="button" class="cp" data-copy-el="c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg><span>Copiar</span></button><span id="c1">&lt;script src="https://sabionet-anim.vercel.app/v/1.0.2/sabionet-anim.js" defer&gt;&lt;/script&gt;</span></div></div>
+      <div class="codeblk"><button type="button" class="cp" data-copy-el="c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg><span>Copiar</span></button><span id="c1">&lt;script src="https://sabionet-anim.vercel.app/v/1.1.0/sabionet-anim.js" defer&gt;&lt;/script&gt;</span></div></div>
     <div class="step"><h3><i>2</i>Cole a peça onde quiser</h3>
       <p>Adicione um elemento <b>Embed</b> na página e cole o código da peça. Cada card deste catálogo tem o botão <b>Copiar código</b>, que já copia com o tema e o idioma selecionados no topo.</p>
       <div class="codeblk"><span>&lt;sbn-anim piece="CUR-01" theme="light" lang="pt"&gt;&lt;/sbn-anim&gt;</span></div></div>
@@ -190,7 +190,7 @@ main[data-assets="dark"] sbn-anim{border-color:#23222d}
       <div style="overflow-x:auto"><table class="opts"><thead><tr><th>Atributo</th><th>Valores</th><th>O que faz</th></tr></thead><tbody>
         <tr><td><code>piece</code></td><td>código da peça, ex.: <code>CUR-01</code></td><td>Escolhe a ilustração.</td></tr>
         <tr><td><code>theme</code></td><td><code>light</code> · <code>dark</code> · <code>auto</code></td><td>Tema claro, escuro ou automático (segue o tema do sistema do visitante). Pode ser trocado a qualquer momento só editando a palavra.</td></tr>
-        <tr><td><code>lang</code></td><td><code>pt</code> · <code>es</code> (em breve)</td><td>Idioma dos textos da peça.</td></tr>
+        <tr><td><code>lang</code></td><td><code>pt</code> · <code>es</code></td><td>Idioma dos textos da peça.</td></tr>
         <tr><td><code>ratio</code></td><td>ex.: <code>4/5</code>, <code>6/5</code></td><td>Opcional. Muda a proporção do quadro; a ilustração se centraliza dentro dele.</td></tr>
         <tr><td><code>background</code></td><td><code>none</code></td><td>Opcional. Remove o fundo degradê para a peça ficar sobre a cor da seção.</td></tr>
         <tr><td><code>style="--sbn-radius:0"</code></td><td>qualquer medida</td><td>Opcional. Arredondamento dos cantos do quadro (padrão: 20px).</td></tr>
@@ -958,8 +958,8 @@ main[data-assets="dark"] sbn-anim{border-color:#23222d}
 </div>
 </section>
 </main>
-<footer class="wrap">Biblioteca Sabionet Anim v1.0.2. Os logos da Sabionet e dos meios de pagamento são os oficiais. As fotos ainda são provisórias: os fundos em degradê dos heros serão trocados pelas imagens do Figma na versão final.</footer>
-<script src="/v/1.0.2/sabionet-anim.js"></script>
+<footer class="wrap">Biblioteca Sabionet Anim v1.1.0. Os logos da Sabionet e dos meios de pagamento são os oficiais. As fotos ainda são provisórias: os fundos em degradê dos heros serão trocados pelas imagens do Figma na versão final.</footer>
+<script src="/v/1.1.0/sabionet-anim.js"></script>
 <script>
 (function(){
   const main=document.querySelector('main');
@@ -968,6 +968,9 @@ main[data-assets="dark"] sbn-anim{border-color:#23222d}
   const setTheme=t=>{theme=t; hosts().forEach(h=>h.setAttribute('theme',t)); const dark=t==='dark'||(t==='auto'&&matchMedia('(prefers-color-scheme: dark)').matches); main.dataset.assets=dark?'dark':'light';
     document.querySelectorAll('.theme-btns button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===t?'true':'false')); try{localStorage.setItem('sbn-theme',t)}catch(e){}};
   document.querySelectorAll('.theme-btns button').forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.mode)));
+  const setLang=l=>{lang=l; hosts().forEach(h=>h.setAttribute('lang',l)); document.querySelectorAll('.lang-btns button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===l?'true':'false')); try{localStorage.setItem('sbn-lang',l)}catch(e){}};
+  document.querySelectorAll('.lang-btns button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+  try{const l=localStorage.getItem('sbn-lang'); if(l) setLang(l)}catch(e){}
   try{const t=localStorage.getItem('sbn-theme'); if(t) setTheme(t)}catch(e){}
   async function copyText(txt){ try{ await navigator.clipboard.writeText(txt); return true }catch(e){ const ta=document.createElement('textarea'); ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); let ok=false; try{ok=document.execCommand('copy')}catch(_){} ta.remove(); return ok } }
   function flashBtn(b,ok){ const sp=b.querySelector('span'); const old=sp.textContent; b.classList.add('ok'); sp.textContent=ok?'Copiado!':'Selecione e copie'; setTimeout(()=>{b.classList.remove('ok'); sp.textContent=old},1600) }
